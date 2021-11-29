@@ -1,0 +1,49 @@
+<odoo>
+  <data>
+      <record model="ir.actions.act_window" id="action_teacher_view">
+      <field name="name">老師列表</field>
+      <field name="res_model">lab2.teacher</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Form -->
+
+    <record model="ir.ui.view" id="action_teacher_form">
+      <field name="name">老師Form</field>
+      <field name="model">lab2.teacher</field>
+      <field name="arch" type="xml">
+          <form>
+              <sheet>
+                  <group>
+                      <field name="name"/>
+                      <field name="age"/>
+                  </group>
+                  <!--顯示One2many字段所對應的欄位-->
+                  <field name="class_student" nolabel="1">
+                      <tree editable="top" string="班上學生" widget="one2many">
+                          <field name="name"/>
+                          <field name="age"/>
+                          <field name="sex"/>
+                      </tree>
+                  </field>
+              </sheet>
+          </form>
+      </field>
+    </record>
+
+    <!-- Tree(List) -->
+
+    <record model="ir.ui.view" id="action_teacher_tree">
+      <field name="name">老師List</field>
+      <field name="model">lab2.teacher</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="age"/>
+          <field name="note"/>
+        </tree>
+      </field>
+    </record>
+
+  </data>
+</odoo>

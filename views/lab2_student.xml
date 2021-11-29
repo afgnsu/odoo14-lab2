@@ -1,0 +1,42 @@
+<odoo>
+  <data>
+    <record model="ir.actions.act_window" id="lab2.action_student_view">
+      <field name="name">學生列表</field>
+      <field name="res_model">lab2.student</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Form -->
+
+    <record model="ir.ui.view" id="lab2.action_student_form">
+      <field name="name">學生Form</field>
+      <field name="model">lab2.student</field>
+      <field name="arch" type="xml">
+        <form>
+          <group>
+            <field name="name"/>
+            <field name="age"/>
+            <field name="class_teacher"/>
+            <field name="note"/>
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <!-- Tree(list) -->
+
+    <record model="ir.ui.view" id="lab2.action_student_tree">
+      <field name="name">學生List</field>
+      <field name="model">lab2.student</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="age"/>
+          <field name="class_teacher"/>
+          <field name="note"/>
+        </tree>
+      </field>
+    </record>
+
+  </data>
+</odoo>

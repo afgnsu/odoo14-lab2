@@ -1,0 +1,12 @@
+<odoo>
+    <data>
+        <!-- Top menu item -->
+        <menuitem name="Lab2(一對多、多對一)" id="lab2.menu_root"/>
+
+        <!-- actions -->
+        <menuitem name="學生" id="lab2.menu_1" parent="lab2.menu_root"
+                  action="lab2.action_student_view"/>
+        <menuitem name="老師" id="lab2.menu_2" parent="lab2.menu_root"
+                  action="lab2.action_teacher_view"/>
+    </data>
+</odoo>
